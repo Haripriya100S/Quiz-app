@@ -1,44 +1,21 @@
 function Footer() {
     return ( 
-        <div className="container-fluid text-light bg-dark p-3 ">
-            <div className="row">
-                {/* Column1 */}
-                <div className="col">
-                    <h4>This memes Inc</h4>
-                    <ul className="list-unstyled">
-                        <li>342-420-6969</li>
-                        <li>India</li>
-                        <li>123 Street South North</li>
-                    </ul>
-                </div>
+        
+        <footer className="container-fluid bg-dark text-light pb-4 text-center ">
+            <div className=" mt-3 ">
+                
+                <nav className="footer-nav d-flex gap-5 justify-content-around mb-3">
+                <a href="#!" className="text-decoration-none">Terms of Service</a>
+                <a href="#!" className="text-decoration-none">About</a>
+                <a href="#!" className="text-decoration-none">help</a>
+                <a href="#!" className="text-decoration-none">Privacy</a>
+                </nav>
 
-                {/* Column2 */}
-                <div className="col">
-                    <h4>This memes Inc</h4>
-                    <ul className="list-unstyled">
-                        <li>342-420-6969</li>
-                        <li>India</li>
-                        <li>123 Street South North</li>
-                    </ul>
-                </div>
-
-                {/* Column3 */}
-                <div className="col">
-                    <h4>This memes Inc</h4>
-                    <ul className="list-unstyled">
-                        <li>342-420-6969</li>
-                        <li>India</li>
-                        <li>123 Street South North</li>
-                    </ul>
-                </div>
+                <small >
+                @2022 <strong>Testym</strong>, All Rights Reserved
+                </small>
             </div>
-
-            <div className="row text-center">
-                <p className="col-sm">
-                    &copy;{new Date().getFullYear()} This memes Inc | All rights reserved | Pvt.limited
-                </p>
-            </div>
-        </div>
+        </footer>
      );
 }
 
