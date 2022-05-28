@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 function Contact() {
     // let [usersList, setUsersList] = useState([])
     const {register, handleSubmit, formState: { errors } } = useForm()
-    console.log("error obj is ", errors);
+    // console.log("error obj is ", errors);
     
     const onFormSubmit = (userObj) => {
         console.log(userObj);
@@ -13,9 +13,9 @@ function Contact() {
         // setUsersList([...usersList, userObj])
     }
     return ( 
-        <div className='container-fluid pb-5'>
-            <form  className="mx-auto w-50 bg-secondary text-light ps-5 pe-5 border pt-5 pb-5 mt-4" onSubmit={handleSubmit(onFormSubmit)}>
-                <h1 className="display-6 text-center pt-3">Drop your Queries</h1>
+        <div className='container  bg-light border shadow-lg pb-5'>
+            <form  className="mx-auto w-50 text-light-sm pt-5 pb-5 mt-4" onSubmit={handleSubmit(onFormSubmit)}>
+                <h1 className="display-6 text-center pt-3 text-info" >Drop your Queries</h1>
 
 
                 <div className="mb-3">
@@ -36,12 +36,11 @@ function Contact() {
                     <label>feedback/queries</label>
                     <textarea type="textarea"  id="text" className="form-control" {...register("text", {required:true})}/>
                 </div>
-                <div> 
                 <button type="submit" className="btn btn-primary mb-2 mx-auto">
                     Submit
                 </button> 
-                </div>
             </form> 
+            
             
         </div>
      );

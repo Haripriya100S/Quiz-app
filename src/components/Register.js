@@ -15,11 +15,11 @@ function SignUp() {
         console.log(userObj);
     }
     return ( 
-        <div className="bg-light mb-5">
+        <div className="bg-light pb-5 pt-5">
             <div className="display-4 text-center text-info">
                 Sign Up
             </div>
-            <Form className="w-50 mx-auto mb-3" onSubmit={handleSubmit(onFormSubmit)}>
+            <Form className="w-50 mx-auto mb-3 mt-3" onSubmit={handleSubmit(onFormSubmit)}>
                 <Form.Group className="mb-3">
                     <Form.Label>Username</Form.Label>
                     <Form.Control type="text" placeholder="Enter Username" {...register("username", {required: true})}>

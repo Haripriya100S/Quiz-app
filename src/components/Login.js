@@ -16,11 +16,11 @@ function Login() {
         console.log(userCredentialObj);
     }
     return (  
-        <div className="bg-light">
+        <div className="bg-light pt-5 pb-5">
             <div className="display-4 text-center text-info ">
                 Login page
             </div>
-            <Form className="w-50 mx-auto" onSubmit={handleSubmit(onFormSubmit)}>
+            <Form className="w-50 mx-auto mt-3" onSubmit={handleSubmit(onFormSubmit)}>
                 <Form.Group className="mb-3">
                     <Form.Label>Username</Form.Label>
                     <Form.Control type="text" placeholder="Enter Username" {...register("username", {required: true})}>

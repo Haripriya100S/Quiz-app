@@ -6,11 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { AppProvider } from './context';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <AppProvider>
     <App />
+    </AppProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

@@ -1,5 +1,6 @@
-import {Link} from 'react-router-dom';
-
+import {NavLink, Outlet} from 'react-router-dom';
+import { Routes, Route} from "react-router-dom";
+import Pymodule from './PyModul';
 
 function Tests(props) {
     return ( 
@@ -8,11 +9,23 @@ function Tests(props) {
                     <div className='card card-body w-100 m-3 mx-auto shadow'>
                         <img className="mt-2 h-75" src={props.topic.proimg} alt='' />
                         <div className="text-center mt-3">
-                            <button type="button" className="btn btn-success btn-outline-dark mt-4"><Link className="nav-link text-center text-warning"to="Python">{props.topic.proname}</Link></button>
+                            <button type="button" className="btn btn-success btn-outline-dark mt-4">
+                                <NavLink className="nav-link text-center text-warning" to={props.topic.link}>
+                                    {props.topic.proname}
+                                </NavLink>
+                            </button>
                         </div>
                     </div>      
-                </div>
+                    <Outlet/>
+                   
             </div>
+
+            <Routes>
+                
+                <Route path="topics/Javamodule" element={<Pymodule/>}/>
+                <Route path="topics/Cplusmodule" element={<Pymodule/>}/>             
+            </Routes>
+        </div>
     );
 }
     

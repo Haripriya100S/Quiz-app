@@ -1,23 +1,25 @@
 import React from 'react';
 import Tests from './Tests';
 
+// import Contact from './Contact';
+
 function Topics() {
     let topics = [
 
         {
             proname: "Python",
             proimg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8ni0KgLSxdD4xdShtA1o2NRI1U8yMo5bd7g&usqp=CAU",
-            link: "Python"
+            link: "Pymodule"
         },
         {
             proname: "Java",
             proimg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp4BVkW91-pl1DxdleSdMBzyprcr81plL5Mw&usqp=CAU",
-            link: "java"
+            link: "Javamodule"
         },
         {
             proname: "C++",
             proimg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnmrOS43ZZN7E46ps9OOUma5q5vi6mBqkPuQ&usqp=CAU",
-            link: "cplus"
+            link: "Cplusmodule"
         }
         // {
         //     pro1name: "HTML",
@@ -40,6 +42,8 @@ function Topics() {
                     </Tests>)
                 }
             </div>
+
+            
         </div>
 
      );

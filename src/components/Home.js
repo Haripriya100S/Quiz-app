@@ -1,7 +1,4 @@
 import { Carousel } from 'react-responsive-carousel';
-// import C2 from '../images/caro_try_with_canva.png';
-// import c1 from '../images/caro-1.png';
-// import c2 from '../images/carochange-1.png';
 import c3 from '../images/QuizCaro.svg';
 
 function Home() {
