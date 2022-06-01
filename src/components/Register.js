@@ -2,6 +2,9 @@ import { useForm} from "react-hook-form";
 import { Form, Button} from "react-bootstrap";
 import { MdLogin } from "react-icons/md";
 import React from "react";
+import axios from "axios";
+import {useNavigate} from 'react-router-dom';
+// import Toast from 'react-bootstrap/Toast';
 
 function SignUp() {
     const {
@@ -10,9 +13,25 @@ function SignUp() {
         formState: { errors },
     } = useForm();
 
+    const navigate = useNavigate();
+
 
     const onFormSubmit = (userObj) => {
         console.log(userObj);
+        axios.post('http://localhost:4700/user-api/create-user', userObj)
+        .then(response => {
+            alert(response.data.message);
+            //if user created
+            if(response.data.message === "new user created successfully"){
+                //navigate to login
+                navigate("/Login");
+            }
+        })
+        .catch(error => 
+            {
+                console.log(error);
+                alert(error.data.message);
+            })
     }
     return ( 
         <div className="bg-light pb-5 pt-5">
