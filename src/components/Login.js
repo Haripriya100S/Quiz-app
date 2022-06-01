@@ -2,6 +2,8 @@ import { useForm} from "react-hook-form";
 import { Form, Button} from "react-bootstrap";
 import { MdLogin } from "react-icons/md";
 import React from "react";
+import {useSelector, useDispatch} from 'react-redux';
+import {userLogin} from '../slices/userSlice';
 
 
 function Login() {
@@ -12,9 +14,14 @@ function Login() {
         formState: { errors },
     } = useForm();
 
+    const {userObj, isError, isLoading, isSuccess, errMsg} = useSelector(state => state.user)
+    let dispatch = useDispatch();
+
     const onFormSubmit = (userCredentialObj) => {
         console.log(userCredentialObj);
+        dispatch(userLogin(userCredentialObj))
     }
+    
     return (  
         <div className="bg-light pt-5 pb-5">
             <div className="display-4 text-center text-info ">
