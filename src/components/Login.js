@@ -4,6 +4,8 @@ import { MdLogin } from "react-icons/md";
 import React from "react";
 import {useSelector, useDispatch} from 'react-redux';
 import {userLogin} from '../slices/userSlice';
+import {useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 
 
 function Login() {
@@ -21,6 +23,13 @@ function Login() {
         console.log(userCredentialObj);
         dispatch(userLogin(userCredentialObj))
     }
+
+    let navigate = useNavigate();
+    useEffect(() => {
+        if (isSuccess) {
+          navigate("/userdashboard");
+        }
+    }, [isSuccess, isError]);
     
     return (  
         <div className="bg-light pt-5 pb-5">
