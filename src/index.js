@@ -6,14 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { AppProvider } from './context';
+// import { AppProvider } from './context';
+import {store } from "./store";
+import {Provider} from "react-redux";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <AppProvider>
-    <App />
-    </AppProvider>
+      <Provider store={store}>
+        <App />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
